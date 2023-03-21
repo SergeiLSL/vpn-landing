@@ -1,16 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"VPNLandingPages-01"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header-01.htm',{})
-			<main class="page">
-            VPNLandingPages-01
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"VPNLandingPages-01"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header-01.htm',{})
+      <main class="page">
+
+         <section class="page__features features">
+            <div class="features__container">
+               <div class="features__inner">
+                  <h2 class="features__title title">
+                     features
+                  </h2>
+
+                  <div class="features__body-card card">
+                     <!--блок для ограничения ширины в 1300px-->
+                     <div class="card__row">
+                        <!--будущий flex-контейнер-->
+                        <div class="card__column">
+                           <!--колонки-->
+                           <div class="card__item">
+                              <!--создаем саму карточку flex-элемент-->
+                              <div class="card__image">
+                                 <img src="@img/features/icon-01.svg" alt="" class="card__icon">
+                              </div> 
+                              <div class="card__text">Browse privately</div>
+                           </div>
+                        </div>
+                        
+                        <div class="card__column">
+                           <!--колонки-->
+                           <div class="card__item">
+                              <!--создаем саму карточку flex-элемент-->
+                              <div class="card__image">
+                                 <img src="@img/features/icon-02.svg" alt="" class="card__icon">
+                              </div> 
+                              <div class="card__text">Bypass</div>
+                           </div>
+                        </div>
+
+                        <div class="card__column">
+                           <!--колонки-->
+                           <div class="card__item">
+                              <!--создаем саму карточку flex-элемент-->
+                              <div class="card__image">
+                                 <img src="@img/features/icon-03.svg" alt="" class="card__icon">
+                              </div> 
+                              <div class="card__text">Clean web</div>
+                           </div>
+                        </div>
+
+                        <div class="card__column">
+                           <!--колонки-->
+                           <div class="card__item">
+                              <!--создаем саму карточку flex-элемент-->
+                              <div class="card__image">
+                                 <img src="@img/features/icon-04.svg" alt="" class="card__icon">
+                              </div> 
+                              <div class="card__text">No logging</div>
+                           </div>
+                        </div>
+
+                        <div class="card__column">
+                           <!--колонки-->
+                           <div class="card__item">
+                              <!--создаем саму карточку flex-элемент-->
+                              <div class="card__image">
+                                 <img src="@img/features/icon-05.svg" alt="" class="card__icon">
+                              </div> 
+                              <div class="card__text">Encryption</div>
+                           </div>
+                        </div>
+
+                        <div class="card__column">
+                           <!--колонки-->
+                           <div class="card__item">
+                              <!--создаем саму карточку flex-элемент-->
+                              <div class="card__image">
+                                 <img src="@img/features/icon-06.svg" alt="" class="card__icon">
+                              </div> 
+                              <div class="card__text">Kill switch</div>
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </div>
+
+               </div>             
+            </div>
+         </section>
+
+         <section class="page__support support">
+            <div class="support__container">
+               <div class="support__inner">
+                  <div class="support__row">
+                     <div class="support__column support__column_01">
+                        <div class="support__card">
+                           <div class="support__title">WE VALUE YOUR PRIVACY</div>
+                           <div class="support__text">
+                              <p>
+                                 Your information provided is solely used by PrivateSurf VPN
+                                 for the use of a virtual private network.
+                                 We will not sell your information to any other party.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="support__column support__column_02">
+                        <div class="support__card">
+                           <div class="support__title">CUSTOMER SUPPORT</div>
+                           <div class="support__text">
+                              <p>
+                                 Our technical support team is ready to answer questions.
+                                 You can contact them at cs@surfingvpn.com
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="support__column support__column_03">
+                        <div class="support__card">
+                           <div class="support__title">YOUR SATISFACTION IS OUR PRIORITY</div>
+                           <div class="support__text">
+                              <p>
+                                 If you are in any way unhappy with the quality of our service
+                                 or product please contact us. We are here to help you.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="support__column support__column_04">
+                        <div class="support__card">
+                           <div class="support__title">WHAT ARE THE BENEFITS OF A VPN?</div>
+                           <div class="support__text">
+                              <p>
+                                 With PrivateSurf VPN you can access content from different
+                                 countries, which would not neccessarily be available in your
+                                 country. Also with a VPN you can hide your online presence
+                                 to secure your daily internet activity
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="support__conditions">
+                     <ul class="support__items">
+                        <li><a href="#" class="support__link">Privacy Policy</a></li>
+                        <li><a href="#" class="support__link">Terms and conditions</a></li>
+                        <li><a href="#" class="support__link">Contact</a></li>
+                        <li><a href="#" class="support__link">How to uninstall</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
+</body>
+
 </html>

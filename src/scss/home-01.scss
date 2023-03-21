@@ -1,3 +1,232 @@
+.page {
+   // .page__features
+   &__features {
+   }
+   // .page__support
+   &__support {
+   }
+}
 //====================================================================================================
 
 //====================================================================================================
+//========================================================================================================================================================
+.features {
+   @include adaptiveValue("padding-top", 75, 30);
+   @include adaptiveValue("padding-bottom", 114, 50);
+   background: #060606;
+   // .features__container
+   &__container {
+   }
+   // .features__inner
+   &__inner {
+      max-width: rem(900);
+      margin: 0 auto;
+   }
+   // .features__title
+   &__title {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 50, 25);
+      }
+   }
+   // .features__body-card
+   &__body-card {
+   }
+}
+
+.card {
+   // .card__row
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      column-gap: rem(48);
+      @include adaptiveValue("gap", 48, -10);
+
+      @media (max-width: $mobile) {
+         flex-wrap: wrap;
+         justify-content: center;
+         @include adaptiveValue("column-gap", 48, 25);
+         row-gap: rem(30);
+         justify-content: space-around;
+      }
+   }
+   // .card__column
+   &__column {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $mobile) {
+         flex: 0 1 28%;
+      }
+   }
+   // .sevices__item
+   &__item {
+      height: 100%; // чтобы карточки были одной высоты независимо от количества текста
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      // color: #48555b;
+   }
+   // .card__image
+   &__image {
+      display: flex;
+      width: rem(110);
+      height: rem(110);
+      background: #d9d9d9;
+      border-radius: 50%;
+      margin-bottom: rem(17);
+      justify-content: center;
+      align-items: center;
+      margin-bottom: rem(17);
+   }
+   // .sevices__icon
+   &__icon {
+      width: rem(65);
+      height: rem(65);
+      display: flex;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   // .sevices__text
+   &__text {
+      // flex: 1 1 auto; /*чтобы прибить кнопку к низу позволим блоку с текстом увеличиваться*/
+      font-size: rem(14);
+      line-height: 121.428571%; /* 17/14 */
+      text-align: center;
+   }
+}
+//========================================================================================================================================================
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+.support {
+   @include adaptiveValue("padding-top", 135, 40);
+   @include adaptiveValue("padding-bottom", 71, 30);
+   background: #232323;
+   // .support__container
+   &__container {
+   }
+   // .support__inner
+   &__inner {
+      @include adaptiveValue("font-size", 14, 12);
+      line-height: 121.428571%; /* 17/14 */
+   }
+   // .support__row
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      column-gap: rem(20);
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 120, 40);
+      }
+   }
+   // .support__column
+   &__column {
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
+      // .support__column_01
+      &_01 {
+         flex-basis: rem(207);
+         margin-right: rem(57);
+         @media (max-width: $tablet) {
+            flex-basis: rem(329);
+            margin-right: 0;
+         }
+         @media (max-width: $mobile) {
+            flex-basis: rem(750);
+         }
+      }
+      // .support__column_02
+      &_02 {
+         flex-basis: rem(239);
+         margin-right: rem(21);
+         @media (max-width: $tablet) {
+            flex-basis: rem(329);
+            margin-right: 0;
+         }
+         @media (max-width: $mobile) {
+            flex-basis: rem(750);
+         }
+      }
+      // .support__column_03
+      &_03 {
+         flex-basis: rem(341);
+         margin-right: rem(28);
+         @media (max-width: $tablet) {
+            flex-basis: rem(329);
+            margin-right: 0;
+         }
+         @media (max-width: $mobile) {
+            flex-basis: rem(750);
+         }
+      }
+      // .support__column_04
+      &_04 {
+         flex-basis: rem(329);
+         @media (max-width: $tablet) {
+            flex-basis: rem(329);
+            margin-right: 0;
+         }
+         @media (max-width: $mobile) {
+            flex-basis: rem(750);
+            // margin-right: 0;
+         }
+      }
+   }
+   // .support__card
+   &__card {
+   }
+   // .support__title
+   &__title {
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 118.75%; /* 19/16 */
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 21, 12);
+      }
+   }
+   // .support__text
+   &__text {
+   }
+   // .support__conditions
+   &__conditions {
+      max-width: rem(565);
+      margin: 0 auto;
+   }
+   // .support__items
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: rem(57);
+      row-gap: rem(15);
+      justify-content: space-between;
+   }
+   // .support__link
+   &__link {
+      display: inline-block;
+      position: relative;
+      &::after {
+         position: absolute;
+         content: "";
+         height: rem(1.5);
+         background-color: #fff;
+         bottom: rem(-1.5);
+         left: 50%;
+         width: 0;
+         transition: all 0.3s;
+      }
+      &:hover::after {
+         left: 0;
+         width: 100%;
+      }
+   }
+}

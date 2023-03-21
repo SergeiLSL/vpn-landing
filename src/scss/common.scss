@@ -1,1 +1,17 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.none {
+   display: none;
+}
+
+
+.title {
+   font-weight: 700;
+   font-size: rem(48);
+   line-height: 120.833333%; /* 58/48 */
+   color: #0FA2DB;
+   text-transform: uppercase;
+   text-align: center;
+   span {
+      color: #fff;
+   }
+}
