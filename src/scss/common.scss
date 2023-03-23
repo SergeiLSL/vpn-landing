@@ -2,16 +2,18 @@
 .none {
    display: none;
 }
-
-
+/* ==================== */
 .title {
    font-weight: 700;
    font-size: rem(48);
+   @include adaptiveValue("font-size", 48, 36);
    line-height: 120.833333%; /* 58/48 */
-   color: #0FA2DB;
+   color: #0fa2db;
    text-transform: uppercase;
    text-align: center;
+   padding: 0 rem(15);
    span {
       color: #fff;
    }
 }
+/* ==================== */
