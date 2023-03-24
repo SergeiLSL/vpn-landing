@@ -1,4 +1,7 @@
 .page {
+   // .page__secure
+   &__secure {
+   }
    // .page__why-use
    &__why-use {
    }
@@ -16,12 +19,191 @@
    }
 }
 //========================================================================================================================================================
+//========================================================================================================================================================
+.screen-11 {
+   position: relative;
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 11, 40, 0.2) 100%),
+      linear-gradient(180deg, rgba(0, 9, 58, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #111111;
+   @include adaptiveValue("padding-top", 84, 40);
+   @include adaptiveValue("padding-bottom", 63, 40);
+   background: #2c3757;
+   // .screen-11__container
+   &__container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      position: relative;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
+   }
+   // .screen-11__items
+   // &__items {
+   //    flex: 0 1 37.54%;
+   //    display: grid;
+   //    @include adaptiveValue("gap", 60, 25);
+   //    @media (max-width: $mobile) {
+   //       margin-bottom: rem(30);
+   //    }
+   // }
+   // // .screen-11__item
+   // &__item {
+   // }
+   // // .screen-11__title
+   // &__title {
+   //    padding: 0;
+   //    &:not(:last-child) {
+   //       @include adaptiveValue("margin-bottom", 32, 15);
+   //    }
+   // }
+   // // .screen-11__text
+   // &__text {
+   // }
+   // .screen-11__image
+   &__image {
+      flex: 0 1 63.31%;
+      // text-align: right;
+      img {
+         max-width: 100%;
+      }
+   }
+}
+//========================================================================================================================================================
+.secure {
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 11, 40, 0.2) 100%),
+      linear-gradient(180deg, rgba(0, 9, 58, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #111111;
+   @include adaptiveValue("padding-top", 84, 40);
+   @include adaptiveValue("padding-bottom", 127, 40);
+   // .secure__container
+   &__container {
+   }
+   // .secure__inner
+   &__inner {
+      display: flex;
+      align-items: center;
+      // column-gap: rem(79);
+   }
+   // .secure__image
+   &__image {
+      flex: 0 1 51.85%;
+      max-width: 100%;
+   }
+   // .secure__info
+   &__info {
+      flex: 0 1 400%;
+      max-width: rem(488);
+   }
+}
 
+.info {
+   text-align: center;
+   // .info__title
+   &__title {
+      padding: 0;
+      font-size: rem(36);
+      line-height: 122.222222%; /* 44/36 */
+   }
+   // .info__text
+   &__text {
+      font-size: rem(24);
+      line-height: 120.833333%; /* 29/24 */
+      &:not(:last-child) {
+         margin-bottom: rem(27);
+      }
+   }
+   // .info__box
+   &__box {
+      background: #232323;
+      border-radius: 20px;
+      padding: rem(23) rem(69) rem(35) rem(69);
+   }
+   // .info__subtitle
+   &__subtitle {
+      font-weight: 700;
+      font-size: rem(24);
+      line-height: 120.833333%; /* 29/24 */
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin-bottom: rem(15.13);
+      }
+   }
+   // .info__image
+   &__image {
+      display: inline-block;
+      width: rem(42.8);
+      height: rem(22.54);
+      justify-content: center;
+      &:not(:last-child) {
+         margin-bottom: rem(27.32);
+      }
+   }
+   // .info__btn
+   &__btn {
+      &:not(:last-child) {
+         margin-bottom: rem(11);
+      }
+   }
+   // .info__license
+   &__license {
+      font-size: rem(16);
+      line-height: 118.75%; /* 19/16 */
+   }
+}
+
+//========================================================================================================================================================
 //====================================================================================================
 .why-use {
-   @include adaptiveValue("padding-top", 127, 40);
+   @include adaptiveValue("padding-top", 64, 40);
    @include adaptiveValue("padding-bottom", 157, 40);
    background: #0c0c15;
+   // ..why-use__offers
+   &__offers {
+      &:not(:last-child) {
+         margin-bottom: rem(22);
+      }
+   }
+   // .why-use__items
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      // display: grid;
+      // grid-template-columns: (4, 1fr);
+      // gap: rem(30);
+      // @media (max-width: $mobile) {
+      //    justify-content: center;
+      // }
+      margin: 0 rem(-10);
+      // row-gap: rem(30);
+      @include adaptiveValue("row-gap", 30, 15);
+   }
+   // ..why-use__item
+   &__item {
+      flex: 0 1 25%;
+      @media (max-width:$tablet){
+         flex: 0 1 50%;
+
+      }
+      @media (max-width:$mobileSmall){
+         flex: 0 1 100%;
+         padding-left: rem(30);  
+      }
+      padding: 0 rem(10);
+      display: flex;
+      align-items: center;
+      img {
+         // margin-right: rem(13);
+         @include adaptiveValue("margin-right", 13, 9);
+      }
+      p {
+         font-weight: 700;
+         font-size: rem(16);
+         @include adaptiveValue("font-size", 16, 13);
+         line-height: 118.75%; /* 19/16 */
+         text-transform: uppercase;
+      }
+   }
    // .why-use__container
    &__container {
       // display: flex;
@@ -29,6 +211,7 @@
    }
    // .why-use__inner
    &__inner {
+      @include adaptiveValue("padding-top", 127, 20);
       max-width: rem(956);
       margin: 0 auto;
    }
@@ -270,7 +453,7 @@
          max-width: 100%;
       }
       @media (min-width: $mobile) {
-         flex: 0 1 41.7%;         
+         flex: 0 1 41.7%;
          @include adaptiveValue("right", -98, 15);
          img {
             position: absolute;
@@ -331,20 +514,8 @@
       }
    }
    &__btn {
-      display: inline-block;
-      font-weight: 700;
-      @include adaptiveValue("font-size", 24, 18);
-      line-height: 120.833333%; /* 29/24 */
-      color: #fff;
-      padding: rem(14) 0;
       @include adaptiveValue("padding-left", 91, 30);
       @include adaptiveValue("padding-right", 91, 30);
-      background: #0fa2db;
-      border-radius: rem(20);
-      transition: background 0.3s ease;
-      &:hover {
-         background: #0c85b5;
-      }
    }
 }
 //========================================================================================================================================================

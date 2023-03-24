@@ -17,3 +17,19 @@
    }
 }
 /* ==================== */
+.btn {
+   display: inline-block;
+   font-weight: 700;
+   @include adaptiveValue("font-size", 24, 18);
+   line-height: 120.833333%; /* 29/24 */
+   color: #fff;
+   padding: rem(14) 0;
+   @include adaptiveValue("padding-left", 69, 30);
+   @include adaptiveValue("padding-right", 69, 30);
+   background: #0fa2db;
+   border-radius: rem(20);
+   transition: background 0.3s ease;
+   &:hover {
+      background: #0c85b5;
+   }
+}
