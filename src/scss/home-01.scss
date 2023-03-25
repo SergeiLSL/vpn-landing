@@ -34,9 +34,12 @@
    &__inner {
       max-width: rem(1149);
       display: flex;
+      flex-wrap: wrap;
+      gap: rem(20);
       justify-content: space-between;
       font-size: rem(16);
       line-height: 118.75%; /* 19/16 */
+      margin: 0 auto;
    }
    // .contact__mail
    &__mail {

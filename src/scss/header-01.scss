@@ -1,4 +1,47 @@
 //====================================================================================================
+.header {
+   background: #111111;
+   @include adaptiveValue("padding-top", 53, 30);
+   @include adaptiveValue("padding-bottom", 53, 30);
+   // .header__container
+   &__container {
+   }
+   // .header__inner
+   &__inner {
+      max-width: rem(1149);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: rem(20);
+   }
+   // .header__image
+   &__image {
+      // margin-left: rem(89);
+   }
+   // .header__button
+   &__button {
+   }
+   // .header__btn
+   &__btn {
+      display: inline-block;
+      @include adaptiveValue("font-size", 16, 14);
+      line-height: 118.75%; /* 19/16 */
+      color: #fff;
+      padding: rem(14) rem(32);
+      // @include adaptiveValue("padding-left", 3, 30);
+      // @include adaptiveValue("padding-right", 69, 30);
+      background: #2F2F2F;
+      border-radius: 10px;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+      &:hover {
+         background: #4e4e4e;
+      }
+   }
+}
+
 
 //====================================================================================================
 
