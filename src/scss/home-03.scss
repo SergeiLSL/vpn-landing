@@ -1,3 +1,113 @@
 //====================================================================================================
 
 //====================================================================================================
+
+//========================================================================================================================================================
+//========================================================================================================================================================
+
+.protection-03 {
+   @include adaptiveValue("padding-top", 94, 30);
+   @include adaptiveValue("padding-bottom", 142, 30);
+   background: #060606;
+   // .protection__title
+   &__title {
+      color: #fff;
+      text-align: center;
+      @include adaptiveValue("margin-bottom", 109, 30);
+   }
+   // .protection__container
+   &__container {
+      @media (min-width: $mobile) {
+         min-height: 100%;
+         display: flex;
+      }
+   }
+   // .protection__design
+   &__design-03 {
+      flex: 0 1 50%;
+      margin: 0 auto;
+      // @include adaptiveValue("padding-bottom", 70, 20);
+      @media (min-width: $mobile) {
+         flex: 0 1 42.23%;
+         align-self: center;
+         @include adaptiveValue("margin-left", 45, 0);
+      }
+   }
+   // .protection__image
+   &__image {
+      flex: 0 1 100%;
+      position: relative;
+      img {
+         width: rem(767);
+         max-width: 100%;
+      }
+      @media (min-width: $mobile) {
+         flex: 0 1 50.4%;
+         img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            object-position: center;
+         }
+      }
+   }
+}
+
+.design-03 {
+   align-self: start;
+   max-width: rem(549);
+   @media (max-width: $mobile) {
+      max-width: 100%;
+      max-width: rem(767);
+      &:not(:last-child) {margin-bottom: rem(30);}
+   }
+   // .design__subtitle
+   &__subtitle {
+      font-weight: 700;
+      font-size: rem(32);
+      @include adaptiveValue("font-size", 32, 24);
+      line-height: 121.875%; /* 39/32 */
+      &:not(:last-child) {
+         margin-bottom: rem(43);
+      }
+   }
+   // .design__offers
+   &__offers {
+      &:not(:last-child) {
+         margin-bottom: rem(32);
+      }
+   }
+   // .design__items
+   &__items {
+   }
+   // .design__item
+   &__item {
+      display: flex;
+      align-items: center;   
+      img {
+         @include adaptiveValue("width", 37, 30);
+         @include adaptiveValue("height", 37, 30);  
+         width: 100%;
+         height: 100%;
+         margin-right: rem(9);
+         &:not(:last-child) {
+            margin-bottom: rem(4);
+         }
+      }
+      p {
+         @include adaptiveValue("font-size", 20, 16);
+         line-height: 115%; /* 23/20 */
+         @media (max-width: $mobileSmall) {
+            // font-weight: 600;
+         }
+      }
+   }
+   &__btn-03 {
+      // @include adaptiveValue("padding-left", 70, 30);
+      // @include adaptiveValue("padding-right", 70, 30);
+   }
+}
+//========================================================================================================================================================

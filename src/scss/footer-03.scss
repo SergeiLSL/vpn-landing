@@ -1,8 +1,8 @@
 //====================================================================================================
-.footer {
-   @include adaptiveValue("padding-top", 44, 25);
-   @include adaptiveValue("padding-bottom", 33, 20);
-   background: #111111;
+.footer-03 {
+   @include adaptiveValue("padding-top", 62, 30);
+   @include adaptiveValue("padding-bottom", 62, 30);
+   background: #0D0C14;
    // .footer__container
    &__container {
       display: flex;
