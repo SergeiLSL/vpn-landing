@@ -1,14 +1,241 @@
 //====================================================================================================
 
 //====================================================================================================
+//========================================================================================================================================================
+.features-03 {
+   @include adaptiveValue("padding-top", 36, 30);
+   @include adaptiveValue("padding-bottom", 118, 50);
+   background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #232323;
+   // .features__container
+   &__container {
+      // display: flex;
+   }
+   // .features__inner
+   &__inner {
+      // display: flex;
+      max-width: rem(1210);
+      margin: 0 auto;
+   }
+   // .features__title
+   &__title {
+      color: #fff;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 56, 25);
+      }
+   }
+   // .features__body-card
+   &__body-card {
+   }
+}
+
+.card-03 {
+   // .card__row
+   &__row {
+      display: flex;      
+      justify-content: space-between;
+      @include adaptiveValue("column-gap", 20, 5);
+      @media (max-width: $mobile) {
+         flex-wrap: wrap;
+         justify-content: center;
+         row-gap: rem(30);
+         justify-content: space-around;
+         column-gap: rem(20);
+      }
+   }
+   // .card__column
+   &__column {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $mobile) {
+         flex: 0 1 28%;
+         // min-width: rem(128);
+         width: 100%;
+      }
+      @media (max-width: $mobileSmall) {
+         flex: 0 1 45%;
+         // min-width: rem(125);
+         width: 100%;
+      }
+   }
+   &__item {
+      height: 100%; // чтобы карточки были одной высоты независимо от количества текста
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      @include adaptiveValue("row-gap", 27, 15);
+      @include adaptiveValue("padding-bottom", 50, 10);
+      &_02,
+      &_04,
+      &_06 {
+         flex-direction: column-reverse;
+         justify-content: end;
+         padding-bottom: 0;
+         @media (max-width:$mobile){
+            flex-direction: column;   
+         }
+      }
+      @media (max-width:$mobile){
+         padding-bottom: 0;  
+      }
+   }
+   // .card__image
+   &__image {
+      display: flex;
+      @include adaptiveValue("width", 185, 50);
+      @include adaptiveValue("height", 185, 50);
+      background: #d9d9d9;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      &_01 {
+         background: linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(0, 255, 209, 0.8) 92.73%), #1dfae5;
+      }
+      &_02 {
+         background: linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(255, 173, 77, 0.8) 92.73%),
+            #ffad4d;
+      }
+      &_03 {
+         background: linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(211, 255, 86, 0.8) 92.73%),
+            #d3ff56;
+      }
+      &_04 {
+         background: linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(15, 162, 219, 0.8) 92.73%),
+            #5c9dff;
+      }
+      &_05 {
+         background: linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(255, 80, 206, 0.8) 92.73%),
+            #ff50ce;
+      }
+      &_06 {
+         background: linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(236, 0, 0, 0.8) 92.73%), #ff5050;
+      }
+      @media (max-width: $mobile) {
+         @include adaptiveValue("width", 185, 92);
+         @include adaptiveValue("height", 185, 92);
+      }
+   }
+   // .sevices__icon
+   &__icon {
+      @include adaptiveValue("width", 120, 32);
+      @include adaptiveValue("height", 120, 32);
+      display: flex;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      @media (max-width: $mobile) {
+         @include adaptiveValue("width", 120, 60);
+         @include adaptiveValue("height", 120, 60);
+      }
+   }
+   // .sevices__text
+   &__text {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: rem(16);
+      @include adaptiveValue("font-size", 16, 14);
+      line-height: 118.75%; /* 19/16 */
+      text-align: center;
+      text-transform: uppercase;
+   }
+}
+//========================================================================================================================================================
 
 //========================================================================================================================================================
 //========================================================================================================================================================
+// ! Не выровнял карточки
+.steps-03 {
+   display: flex;
+   @include adaptiveValue("padding-top", 59, 30);
+   @include adaptiveValue("padding-bottom", 115, 50);
+   background: #f5f5f5;
+   // .features__container
+   &__container {
+      // display: flex;
+   }
+   // .features__inner
+   &__inner {
+      // max-width: rem(1052);
+      margin: 0 auto;
+   }
+   // .features__title
+   &__title-03 {
+      color: #000;
+      margin-bottom: rem(20);
+   }
+   // .features__body-card
+   &__body-card {
+   }
+}
 
+.card-steps-03 {
+   // .card__row
+   &__row {
+      display: flex;
+      justify-content: space-evenly;
+      column-gap: rem(48);
+      align-items: center;
+      // margin-bottom: rem(32);
+      // @include adaptiveValue("gap", 48, -10);
+
+      @media (max-width: $mobile) {
+         flex-wrap: wrap;
+         justify-content: center;
+         @include adaptiveValue("column-gap", 48, 25);
+         row-gap: rem(30);
+         justify-content: space-around;
+      }
+   }
+   // .card__column
+   &__column {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $mobile) {
+         flex: 0 1 28%;
+      }
+   }
+   // .sevices__item
+   &__item {
+      // flex: 1 1 auto;
+      // min-height: 100%; // чтобы карточки были одной высоты независимо от количества текста
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // text-align: center;
+      // color: #fff;
+      // min-width: rem(181);
+   }
+   // .card__image
+   &__image {
+      // max-width: rem(411);
+      // @include adaptiveValue("width", 159, 120);
+      // @include adaptiveValue("height", 159, 120);
+      // border: 3px solid #0fa2db;
+      // border-radius: 50%;
+      // justify-content: center;
+      // align-items: center;
+   }
+   // .sevices__button
+   &__button {
+      margin-top: rem(32);
+   }
+   // .card-steps-03__btn-03
+   &__btn-03 {
+   }
+}
+
+//========================================================================================================================================================
+//========================================================================================================================================================
 .protection-03 {
    @include adaptiveValue("padding-top", 94, 30);
    @include adaptiveValue("padding-bottom", 142, 30);
-   background: #060606;
+   background: radial-gradient(69.2% 166.64% at 81.32% 28.02%, rgba(255, 23, 23, 0.2) 0%, rgba(0, 0, 0, 0) 100%)
+         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      #0d0c14;
    // .protection__title
    &__title {
       color: #fff;
@@ -25,12 +252,13 @@
    // .protection__design
    &__design-03 {
       flex: 0 1 50%;
-      margin: 0 auto;
+      // margin: 0 auto;
       // @include adaptiveValue("padding-bottom", 70, 20);
       @media (min-width: $mobile) {
          flex: 0 1 42.23%;
          align-self: center;
-         @include adaptiveValue("margin-left", 45, 0);
+         @include adaptiveValue("margin-left", 25, 0);
+         margin-right: rem(20);
       }
    }
    // .protection__image
@@ -62,7 +290,9 @@
    @media (max-width: $mobile) {
       max-width: 100%;
       max-width: rem(767);
-      &:not(:last-child) {margin-bottom: rem(30);}
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
    }
    // .design__subtitle
    &__subtitle {
@@ -86,10 +316,10 @@
    // .design__item
    &__item {
       display: flex;
-      align-items: center;   
+      align-items: center;
       img {
          @include adaptiveValue("width", 37, 30);
-         @include adaptiveValue("height", 37, 30);  
+         @include adaptiveValue("height", 37, 30);
          width: 100%;
          height: 100%;
          margin-right: rem(9);

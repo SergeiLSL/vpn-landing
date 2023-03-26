@@ -38,19 +38,47 @@
 .btn-03 {
    display: inline-block;
    font-weight: 700;
-   @include adaptiveValue("font-size", 32, 24);
+   @include adaptiveValue("font-size", 30, 24);
    line-height: 118.75%; /* 38/32 */
-   color: #fff;
-   // padding: rem(30) 0 rem(32) 0;
-   @include adaptiveValue("padding-top", 30, 15);
-   @include adaptiveValue("padding-bottom", 32, 15);
-   @include adaptiveValue("padding-left", 70, 30);
-   @include adaptiveValue("padding-right", 70, 30);
-   background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FF5050;
-   border-radius: 30px;
+   color: #000;
+   @include adaptiveValue("padding-top", 31, 15);
+   @include adaptiveValue("padding-bottom", 31, 15);
+   border-radius: rem(30);
    transition: background 0.3s ease;
-   &:hover {
-      background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FF5050;
+   &_red {
+      @include adaptiveValue("padding-left", 70, 30);
+      @include adaptiveValue("padding-right", 70, 30);
+      color: #fff;
+      background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FF5050;
+      &:hover {
+         background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FF5050;
+      }
+   }
+   &_green {
+      @include adaptiveValue("padding-left", 83, 30);
+      @include adaptiveValue("padding-right", 82, 30);
+      background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #1DFAE5;   
+      &:hover {
+         background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #1DFAE5;   
 
+      }
+   }
+   &_yellow {
+      @include adaptiveValue("padding-left", 53, 30);
+      @include adaptiveValue("padding-right", 52.5, 30);
+      background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFAD4D;      
+      &:hover {
+         background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFAD4D;      
+         
+      }
+   }
+   &_blue {
+      @include adaptiveValue("padding-left", 53, 30);
+      @include adaptiveValue("padding-right", 52.5, 30);
+      background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #5C9DFF;
+      &:hover {
+         background: radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.1) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #5C9DFF;
+         
+      }
    }
 }

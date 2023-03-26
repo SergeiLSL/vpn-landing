@@ -1,5 +1,47 @@
 //====================================================================================================
-
+.header-03 {
+   background: #1f1e28;
+   @include adaptiveValue("padding-top", 28, 20);
+   @include adaptiveValue("padding-bottom", 29, 10);
+   // .header__container
+   &__container {
+   }
+   // .header__inner
+   &__inner {
+      max-width: rem(1238);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: rem(5);
+      // row-gap: (10);
+   }
+   // .header__image
+   &__image {
+      // margin-left: rem(89);
+   }
+   // .header__button
+   &__button {
+   }
+   // .header__btn
+   &__btn {
+      display: inline-block;
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: 120.833333%; /* 29/24 */
+      color: #fff;
+      padding: rem(14) rem(15);
+      // @include adaptiveValue("padding-left", 3, 30);
+      // @include adaptiveValue("padding-right", 69, 30);
+      // background: #2F2F2F;
+      // border-radius: 10px;
+      text-transform: uppercase;
+      // transition: background 0.3s ease;
+      &:hover {
+         // background: #4e4e4e;
+      }
+   }
+}
 //====================================================================================================
 
 //Burger
