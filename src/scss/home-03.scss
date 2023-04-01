@@ -6,22 +6,18 @@
 
 //====================================================================================================
 //========================================================================================================================================================
-
 .why-use-03 {
    @include adaptiveValue("padding-top", 56, 40);
    @include adaptiveValue("padding-bottom", 116, 40);
-   background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%)
-         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-      #09080e;
+   background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #09080E;
    // .why-use-03__container
    &__container {
    }
    // .why-use-03__inner
    &__inner {
-      max-width: rem(950);
+      max-width: rem(868);
       margin: 0 auto;
-
-      margin-bottom: rem(80);
+      // margin-bottom: rem(80);
    }
    // .why-use-03__title
    &__title {
@@ -39,82 +35,95 @@
    }
    // .why-use-03__content
    &__content {
+      max-width: rem(1208);
+      margin: 0 auto;
    }
    // .why-use-03__row
    &__row {
       display: flex;
       flex-wrap: wrap;
       margin: 0 rem(-10);
-      // @include adaptiveValue("column-gap", 100, -50);
-      column-gap: rem(70);
-      gap: rem(70);
-      // justify-content: space-between;
-      justify-content: center;  
+      gap: rem(20);
+      justify-content: space-between;
       text-align: center;
-      @media (max-width:$tablet){
-         justify-content: center;  
+      @media (max-width: $tablet) {
+         justify-content: center;
       }
+
    }
    // .why-use-03__column
    &__column {
       flex: 0 1 25%;
       max-width: rem(212);
-      // background: #435a43;
       padding: 0 rem(10);
-      // justify-content: center;
       text-align: center;
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
          flex: 0 1 50%;
       }
-      @media (max-width:$mobileSmall){
+      @media (max-width: $mobileSmall) {
          flex: 0 1 100%;
-         width: 100%;  
+         width: 100%;
+      }
+   }
+   // .why-use-03__big-card
+   &__big-card {
+      position: relative;
+      border: 1px solid #ffffff00;
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0%;
+         left: 50%;
+         transform: translate(-50%, -0%);
+         border-radius: 50%;
+         filter: blur(7.5px);
+         width: rem(123);
+         height: rem(123);
+         z-index: 10;
+      }
+      &_01::after {
+         background: rgba(104, 255, 228, 0.3);
+      }
+      &_02::after {
+         background: rgba(255, 173, 77, 0.3);
+      }
+      &_03::after {
+         background: rgba(211, 255, 86, 0.3);
+      }
+      &_04::after {
+         background: rgba(92, 157, 255, 0.3);
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: rem(58);
+         background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #09080E;
+         // background: #371f49;
+         top: 0%;
+         left: 50%;
+         transform: translate(-50%, 0%);
+         z-index: 11;
       }
    }
    // .why-use-03__card
    &__card {
-      position: relative;
-      // justify-content: center;
    }
    // .why-use-03__image
    &__image {
       position: absolute;
-      top: -2%;
+      top: 10%;
       left: 50%;
-      transform: translate(-50%, -52%);
-      // position: relative;
+      transform: translate(-50%, -0%);
       display: flex;
       display: inline-block;
       width: rem(79);
       height: rem(79);
       border-radius: 50%;
-      background: #2b5f40;
       align-items: center;
       justify-content: center;
       padding: rem(20);
-      &::after {
-         content: "";
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         border-radius: 50%;
-         width: rem(123);
-         height: rem(123);
-         filter: blur(7.5px);
-         z-index: 3;
-      }
-      &::before {
-         // content: "";
-         // position: absolute;
-         // width: rem(123);
-         // height: rem(62);
-         // background: #669c61;
-         // top: -100%;
-         // left: 50%;
-         // transform: translate(-50%, 100%);
-         // z-index: 2;
-      }
+      z-index: 12;
       img {
          width: rem(40);
          height: rem(40);
@@ -122,53 +131,38 @@
       &_01 {
          background: linear-gradient(134.78deg, rgba(255, 255, 255, 0.3) 11.39%, rgba(104, 255, 228, 0.3) 92.72%),
             #68ffe4;
-         &::after {
-            background: rgba(104, 255, 228, 0.3);
-         }
       }
       &_02 {
          background: linear-gradient(134.78deg, rgba(255, 255, 255, 0.3) 11.39%, rgba(255, 173, 77, 0.3) 92.72%),
             #ffad4d;
-         &::after {
-            background: rgba(255, 173, 77, 0.3);
-         }
       }
       &_03 {
          background: linear-gradient(134.78deg, rgba(255, 255, 255, 0.3) 11.39%, rgba(189, 255, 0, 0.3) 92.72%), #d3ff56;
-         &::after {
-            background: rgba(211, 255, 86, 0.3);
-         }
       }
       &_04 {
          background: linear-gradient(134.78deg, rgba(255, 255, 255, 0.3) 11.39%, rgba(92, 157, 255, 0.3) 92.72%),
             #5c9dff;
-         &::after {
-            background: rgba(92, 157, 255, 0.3);
-         }
       }
    }
    // .why-use-03__square
    &__square {
-      // background: rgba(255, 255, 255, 0.5);
-      // opacity: 0.05;
-      // backdrop-filter: blur(rem(5));
-      /* Note: backdrop-filter has minimal browser support */
+      margin-top: rem(60);
       border-radius: 20px;
       border: rem(3) solid #ffffff;
       border-radius: rem(20);
+      z-index: 5;
    }
    // .why-use-03__text
    &__text {
       font-weight: 700;
       font-size: rem(16);
-      @include adaptiveValue("font-size", 16, 12);
+      @include adaptiveValue("font-size", 16, 15);
       line-height: 118.75%; /* 19/16 */
       text-transform: uppercase;
       padding-top: rem(123);
       padding-bottom: rem(36);
    }
 }
-
 //====================================================================================================
 //========================================================================================================================================================
 .features-03 {
