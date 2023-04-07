@@ -1,27 +1,156 @@
 //====================================================================================================
 
 //====================================================================================================
-.proba {
-   // .proba__title
+
+//========================================================================================================================================================
+.protection-02 {
+   @include adaptiveValue("padding-top", 57, 30);
+   @include adaptiveValue("padding-bottom", 100, 30);
+   background: radial-gradient(69.2% 166.64% at 81.32% 28.02%, rgba(255, 23, 23, 0.2) 0%, rgba(0, 0, 0, 0) 100%)
+         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      #0d0c14;
+   // .protection__title
    &__title {
-      font-weight: 700;
-      font-size: rem(48);
-      @include adaptiveValue("font-size", 48, 36);
-      line-height: 120.833333%; /* 58/48 */
-      color: #0fa2db;
-      text-transform: uppercase;
+      font-family: "Roboto";
+      color: #fff;
       text-align: center;
-      padding: 0 rem(15);
-      &:before {
-         @extend %ic;
-         display: block;
-         color: red;
-         font-size: rem(65);
+      @include adaptiveValue("margin-bottom", 109, 30);
+   }
+   // .protection__container
+   &__container {
+      position: relative;
+      max-width: rem(1185);
+      @media (min-width: $mobile) {
+         min-height: 100%;
+         display: flex;
+         // justify-content: space-between;
+         column-gap: rem(73);
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         width: rem(440);
+         height: rem(440);
+         border-radius: 50%;
+         background: #fff;
+         top: -440px;
+         left: -440px;
+      }
+   }
+   // .protection__design
+   &__design-02 {
+      flex: 0 1 40.78%;
+      // margin: 0 auto;
+      // @include adaptiveValue("padding-bottom", 70, 20);
+      @media (min-width: $mobile) {
+         flex: 0 1 42.23%;
+         align-self: center;
+         // @include adaptiveValue("margin-left", 25, 0);
+         // margin-right: rem(20);
+      }
+   }
+   // .protection__image
+   &__image {
+      flex: 0 1 100%;
+      position: relative;
+      img {
+         width: rem(767);
+         max-width: 100%;
+      }
+      @media (min-width: $mobile) {
+         flex: 0 1 54.5%;
+         img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            object-position: center;
+         }
       }
    }
 }
 
-// ._icon-berdle {
-//    color: red;
-//    font-size: rem(65);
-// }
+.design-02 {
+   align-self: start;
+   max-width: rem(471);
+   @media (max-width: $mobile) {
+      max-width: 100%;
+      max-width: rem(767);
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
+   }
+   // .design__subtitle
+   &__subtitle {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: rem(24);
+      @include adaptiveValue("font-size", 24, 20);
+      line-height: 116.666667%; /* 28/24 */
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+   }
+   // .design__offers
+   &__offers {
+      &:not(:last-child) {
+         margin-bottom: rem(19);
+      }
+   }
+   // .design__items
+   &__items {
+   }
+   // .design__item
+   &__item {
+      display: flex;
+      align-items: center;
+      img {
+         @include adaptiveValue("width", 37, 30);
+         @include adaptiveValue("height", 37, 30);
+         width: 100%;
+         height: 100%;
+         margin-right: rem(9);
+         &:not(:last-child) {
+            margin-bottom: rem(4);
+         }
+      }
+      p {
+         @include adaptiveValue("font-size", 20, 16);
+         line-height: 115%; /* 23/20 */
+         @media (max-width: $mobileSmall) {
+            // font-weight: 600;
+         }
+      }
+   }
+   .btn-02 {
+      display: inline-block;
+      font-family: "Roboto";
+      font-weight: 700;
+      @include adaptiveValue("font-size", 24, 20);
+      line-height: 116.666667%; /* 28/24 */
+      color: #000;
+      @include adaptiveValue("padding-top", 35, 15);
+      @include adaptiveValue("padding-bottom", 35, 15);
+      // border-radius: rem(30);
+      transition: background 0.3s ease;
+      &_grey {
+         @include adaptiveValue("padding-left", 101, 30);
+         @include adaptiveValue("padding-right", 101, 30);
+         color: #fff;
+         background: #535353;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+         &:hover {
+            background: radial-gradient(
+                     81.69% 566.4% at 24.1% 18.31%,
+                     rgba(255, 240, 240, 0.1) 0%,
+                     rgba(255, 255, 255, 0) 100%
+                  )
+                  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+               #2f2f2f;
+         }
+      }
+   }
+}
+//========================================================================================================================================================
