@@ -1,5 +1,94 @@
 //====================================================================================================
+.features-02 {
+   @include adaptiveValue("padding-top", 61, 30);
+   @include adaptiveValue("padding-bottom", 75, 50);
+   background: #2b2b2b;
+   // .features__container
+   &__container {
+   }
+   // .features__inner
+   &__inner {
+      max-width: rem(1155);
+      margin: 0 auto;
+   }
+   // .features__title
+   &__title {
+      color: #fff;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 41, 25);
+      }
+   }
+   // .features__body-card
+   &__body-card {
+   }
+}
 
+.card-02 {
+   // .card__row
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      column-gap: rem(15);
+      @media (max-width: $mobile) {
+         flex-wrap: wrap;
+         justify-content: center;
+         @include adaptiveValue("column-gap", 25, 15);
+         row-gap: rem(30);
+         justify-content: space-around;
+      }
+   }
+   // .card__column
+   &__column {
+      display: flex;
+      max-width: rem(176);
+      width: 100%;
+      flex-direction: column;
+      @media (max-width: $mobile) {
+         flex: 0 1 28%;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 1 50%;
+      }
+   }
+   // .card__item
+   &__item {
+      height: 100%; // чтобы карточки были одной высоты независимо от количества текста
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+   }
+   // .card__image
+   &__image {
+      display: flex;
+      @include adaptiveValue("width", 150, 70);
+      @include adaptiveValue("height", 150, 70);
+      background: #d9d9d9;
+      border-radius: rem(15);
+      justify-content: center;
+      align-items: center;
+      margin-bottom: rem(12);
+   }
+   // .sevices__icon
+   &__icon {
+      @include adaptiveValue("width", 80, 40);
+      @include adaptiveValue("height", 80, 40);      
+      display: flex;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   // .sevices__text
+   &__text {
+      font-size: rem(24);
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: 116.666667%; /* 28/24 */
+      text-align: center;
+   }
+}
 //====================================================================================================
 
 //========================================================================================================================================================
@@ -26,16 +115,16 @@
          // justify-content: space-between;
          column-gap: rem(73);
       }
-      &::before {
-         content: "";
-         position: absolute;
-         width: rem(440);
-         height: rem(440);
-         border-radius: 50%;
-         background: #fff;
-         top: -440px;
-         left: -440px;
-      }
+      // &::before {
+      //    content: "";
+      //    position: absolute;
+      //    width: rem(440);
+      //    height: rem(440);
+      //    border-radius: 50%;
+      //    background: #fff;
+      //    top: rem(-440);
+      //    left: rem(-440);
+      // }
    }
    // .protection__design
    &__design-02 {
