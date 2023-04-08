@@ -32,9 +32,8 @@
       @media (max-width: $mobile) {
          flex-wrap: wrap;
          justify-content: center;
-         @include adaptiveValue("column-gap", 25, 15);
+         @include adaptiveValue("column-gap", 15, 0);
          row-gap: rem(30);
-         justify-content: space-around;
       }
    }
    // .card__column
@@ -44,10 +43,7 @@
       width: 100%;
       flex-direction: column;
       @media (max-width: $mobile) {
-         flex: 0 1 28%;
-      }
-      @media (max-width: $mobile) {
-         flex: 0 1 50%;
+         @include adaptiveValue("max-width", 167, 145);
       }
    }
    // .card__item
@@ -83,13 +79,16 @@
    }
    // .sevices__text
    &__text {
-      font-size: rem(24);
-      @include adaptiveValue("font-size", 24, 18);
+      font-size: rem(22);
+      @include adaptiveValue("font-size", 22, 18);
       line-height: 116.666667%; /* 28/24 */
       text-align: center;
    }
 }
 //====================================================================================================
+//========================================================================================================================================================
+
+
 
 //========================================================================================================================================================
 .protection-02 {
