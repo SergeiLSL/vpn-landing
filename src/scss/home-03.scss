@@ -1,6 +1,157 @@
 .page {
+   // .page__secure-03
+   &__secure-03 {
+   }
    // .page__why-use-03
    &__why-use-03 {
+   }
+}
+
+//========================================================================================================================================================
+
+.secure-03 {
+   background: radial-gradient(42.09% 62.94% at 68.82% 39.03%, rgba(60, 255, 236, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+      #0d0c14;
+   overflow: hidden;
+   // @media (min-width: $mobile) {
+   //    display: flex;
+   // }
+   // .secure-03__top
+   &__top {
+      max-width: rem(1264);
+      padding: 0 rem(20);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding-top: rem(19);
+      flex-wrap: wrap;
+      column-gap: rem(20);
+      @media (max-width:$mobile){
+         &:not(:last-child) {
+            margin-bottom: rem(35);
+         }
+      }
+   }
+   // .secure-03__contact
+   &__contact {
+      font-size: rem(20);
+      line-height: 115%; /* 23/20 */
+      &:not(:last-child) {
+         margin-bottom: rem(33);
+      }
+      @media (max-width:$mobile){
+         &:not(:last-child) {
+            margin-bottom: rem(15);
+         }
+      }
+   }
+   &__inner {
+      @media (min-width: $mobile) {
+         display: flex;
+      }
+   }
+   // .section__content
+   &__content {
+      flex: 0 0 100%;
+      display: flex; // чтобы контент был на всю высоту
+   }
+   // .section__container
+   &__container {
+      max-width: rem(1348);
+      width: 100%;
+      padding: 0 rem(20);
+      margin: 0 auto;
+      // background: #6a6a6a;// это на усмотрение
+      // display: flex; // текст посредине изображения
+      // align-items: center; // текст посредине изображения
+   }
+   // .section__body
+   &__body {
+      // padding: rem(50) 0 rem(50) 0; // это на усмотрение
+      @media (min-width:$mobile){
+         max-width: 45%;
+         // width: rem(538);
+         padding: rem(78) rem(0) rem(20) rem(0); // это на усмотрение  
+      }
+   }
+   // .section__title
+   &__title {
+      font-weight: 700;
+      // font-size: rem(40);
+      @include adaptiveValue("font-size", 40, 25);
+      line-height: 117.5%; /* 47/40 */
+      &:not(:last-child) {
+         margin-bottom: rem(13);
+      }
+   }
+   // .section__text
+   &__text {
+      font-weight: 400;
+      // font-size: rem(24);
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: 116.666667%; /* 28/24 */
+      &:not(:last-child) {
+         margin-bottom: rem(36);
+      }
+   }
+   // .section__subtitle
+   &__subtitle {
+      font-weight: 700;
+      // font-size: rem(40);
+      @include adaptiveValue("font-size", 40, 25);
+      line-height: 117.5%; /* 47/40 */
+      &:not(:last-child) {
+         margin-bottom: rem(40);
+      }
+   }
+   // .section__btn
+   &__btn {
+      display: inline-block;
+      font-weight: 700;
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: 120.833333%; /* 29/24 */
+      color: #000;
+      padding: rem(22) 0;
+      @include adaptiveValue("padding-left", 70, 30);
+      @include adaptiveValue("padding-right", 70, 30);
+      background: radial-gradient(
+            81.69% 566.4% at 24.1% 18.31%,
+            rgba(255, 240, 240, 0.8) 0%,
+            rgba(255, 255, 255, 0) 100%
+         ),
+         #1dfae5;
+      box-shadow: 0px 7px 7px rgba(126, 126, 126, 0.25);
+      border-radius: 30px;
+      transition: background 0.3s ease;
+      &:hover {
+         background: #1adcc9;
+      }
+      margin-bottom: rem(20);
+   }
+   // .section__image
+   &__image {
+      img {
+         max-width: 100%;
+      }
+
+      @media (min-width: $mobile) {
+         position: relative; //  чтобы картинка правилно размещалась в отведенном месте
+         // flex: 0 0 50%;
+         flex: 0 0 calc(((100vw - 40px) * 0.59) + 20px); /* изменил для пропорции, 0,6 это 60% */
+         padding-bottom: 44%;
+         transform: translate(-100%, 0);
+         img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+         }
+      }
+      @media (max-width:$tablet){
+         flex: 0 0 calc(((100vw - 40px) * 0.54) + 20px); /* изменил для пропорции, 0,6 это 60% */
+      }
    }
 }
 
@@ -9,7 +160,8 @@
 .why-use-03 {
    @include adaptiveValue("padding-top", 56, 40);
    @include adaptiveValue("padding-bottom", 116, 40);
-   background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #09080E;
+   background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+      #09080e;
    // .why-use-03__container
    &__container {
    }
@@ -49,7 +201,6 @@
       @media (max-width: $tablet) {
          justify-content: center;
       }
-
    }
    // .why-use-03__column
    &__column {
@@ -98,7 +249,8 @@
          position: absolute;
          width: 100%;
          height: rem(58);
-         background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #09080E;
+         background: radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+            #09080e;
          // background: #371f49;
          top: 0%;
          left: 50%;
@@ -365,6 +517,8 @@
    }
    // .sevices__item
    &__item {
+      // display: flex;
+      // flex-direction: column;
       // flex: 1 1 auto;
       // min-height: 100%; // чтобы карточки были одной высоты независимо от количества текста
       // display: flex;
@@ -376,6 +530,7 @@
    }
    // .card__image
    &__image {
+      // flex: 1 1 auto;
       // max-width: rem(411);
       // @include adaptiveValue("width", 159, 120);
       // @include adaptiveValue("height", 159, 120);
