@@ -517,27 +517,9 @@
    }
    // .sevices__item
    &__item {
-      // display: flex;
-      // flex-direction: column;
-      // flex: 1 1 auto;
-      // min-height: 100%; // чтобы карточки были одной высоты независимо от количества текста
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      // text-align: center;
-      // color: #fff;
-      // min-width: rem(181);
    }
    // .card__image
    &__image {
-      // flex: 1 1 auto;
-      // max-width: rem(411);
-      // @include adaptiveValue("width", 159, 120);
-      // @include adaptiveValue("height", 159, 120);
-      // border: 3px solid #0fa2db;
-      // border-radius: 50%;
-      // justify-content: center;
-      // align-items: center;
    }
    // .sevices__button
    &__button {
@@ -644,7 +626,7 @@
          height: 100%;
          margin-right: rem(9);
          &:not(:last-child) {
-            margin-bottom: rem(4);
+            margin-bottom: rem(6);
          }
       }
       p {
